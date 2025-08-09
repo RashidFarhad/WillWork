@@ -42,19 +42,9 @@ h1 {
   line-height: 1.6;
   font-weight: bold;
 }
-/* Logo icon profile */
-.logo-container {
-  background: rgba(255, 255, 255, 0.2); /* white tint background */
-  padding: 15px;
-  border-radius: 15px;
-  display: inline-block;
+bold;
 }
 
-.logo-container img {
-  width: 80px; /* adjust size as needed */
-  height: auto;
-  display: block;
-}
 
 /* Social Icons Row */
 .icons {
