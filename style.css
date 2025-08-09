@@ -70,12 +70,30 @@ h1 span.cyan { color: #00e5ff; }
   padding: 8px;
 }
 
-/* Icon Colors */
-.facebook { background-color: #1877f2; }
-.instagram { background: linear-gradient(135deg, #1a2980, #26d0ce); }
-.tiktok { background-color: #e6dddd; }
-.telegram { background-color: #0088cc; }
-.whatsapp { background-color: #25d366; }
+/* Container styles */
+.icons a {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden; /* hides any excess image edges */
+}
+
+/* Icon sizing */
+.icons a img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Brand background colors */
+.icons a.facebook { background: #1877F2; }
+.icons a.instagram { background: linear-gradient(135deg, #feda75, #d62976, #962fbf, #4f5bd5); }
+.icons a.tiktok { background: #000000; }
+.icons a.snapchat { background: #fffc00; }
+.icons a.whatsapp { background: #25d366; }
 
 /* Images inside icons */
 .icons img {
