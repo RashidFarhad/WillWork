@@ -1,0 +1,105 @@
+ 
+  @font-face {
+    font-family: 'Rabar 021';
+    src: url('fonts/Rabar_021.ttf') format('truetype');
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, hsl(207, 100%, 50%) 75%, #645a5a 50%);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rabar 021', sans-serif;
+    color: cyan;
+    text-align: center;
+  }
+
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+img  {
+  
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  filter: drop-shadow(0 0 5px white)
+          drop-shadow(0 0 15px white);
+
+
+}
+  .icons {
+    display: flex;
+    gap: 20px;
+  }
+.icons img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+  transition: all 0.3s ease;
+}
+
+
+  .icons a {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 10px;
+    transition: all 0.25s ease;
+  }
+
+  .icons svg {
+    width: 30px;
+    height: 30px;
+    
+    transition: all 0.25s ease;
+  }
+
+  /* Hover colors */
+  .icons a.facebook:hover { background: #1877F2; box-shadow: 0 0 15px #1877F2; }
+  .icons a.instagram:hover { background: #E1306C; box-shadow: 0 0 15px #E1306C; }
+  .icons a.tiktok:hover { background: #fcfafa; box-shadow: 0 0 15px #fdfcfc; }
+  .icons a.snapchat:hover { background: #FFD700; box-shadow: 0 0 15px #ffffff; }
+  .icons a.whatsapp:hover { background: #25d366; box-shadow: 0 0 15px #25D366; }
+.icons a.telegram:hover { background: #6360e0; box-shadow: 0 0 15px #726ae0; }
+  
+.icons a:hover {
+    border-radius: 50%;
+    transform: scale(1.2);
+  }
+
+  .icons a:hover svg {
+    fill: black;
+  }
+/* General style for both typewriters */
+.typewriter {
+    font-family: 'Rabar 021' , sans-serif;
+    font-size: 28px;
+    color: black;
+    text-shadow: 0 0 5px white, 0 0 10px white;
+    opacity: 0;                /* Start hidden for smooth appearance */
+    transition: opacity 0.5s ease-in;
+    display: inline-block;
+    white-space: pre-wrap;     /* Keep spaces and line breaks */
+}
+
+/* When typing starts, fade in */
+.typewriter.active {
+    opacity: 1;
+}
