@@ -1,23 +1,22 @@
-// typewriter.js
-document.addEventListener('DOMContentLoaded', function () {
-  const text = "دەست پێکردنی ناوێنەکان..."; // change this to whatever you want
-  const el = document.getElementById('typewriter');
-  if (!el) {
-    console.error('typewriter element not found (add <span id="typewriter"></span> in the HTML).');
-    return;
-  }
-
-  el.textContent = ''; // clear any initial text
+document.addEventListener("DOMContentLoaded", function() {
+  const text = " سەردانمان بکەن لە تێلێگرام... "; // Your typewriter text
+  const el = document.getElementById("typewriter");
   let i = 0;
-  const speed = 80; // ms per character (smaller = faster)
 
-  function type() {
-    if (i <= text.length) {
-      el.textContent = text.slice(0, i);
+  function typeWriter() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
       i++;
-      setTimeout(type, speed);
+      setTimeout(typeWriter, 100); // typing speed
     }
   }
 
-  type();
+  // Start typing
+  typeWriter();
+
+  // On click: remove glow and open link
+  el.addEventListener("click", function() {
+    el.classList.add("clicked"); // remove glow
+    window.open("https://example.com", "_blank"); // change to your link
+  });
 });
