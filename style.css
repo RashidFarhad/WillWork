@@ -78,6 +78,8 @@ h1 span.cyan { color: #00e5ff; }
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  background: none;
+  transition: background 0.25s ease, transform 0.2s ease;
   overflow: hidden; /* hides any excess image edges */
 }
 
@@ -88,12 +90,21 @@ h1 span.cyan { color: #00e5ff; }
   object-fit: contain;
 }
 
-/* Brand background colors */
-.icons a.facebook { background: #1877F2; }
-.icons a.instagram { background: linear-gradient(135deg, #feda75, #d62976, #962fbf, #4f5bd5); }
-.icons a.tiktok { background: #000000; }
-.icons a.snapchat { background: #fffc00; }
-.icons a.whatsapp { background: #25d366; }
+/* Hover / Click brand backgrounds */
+.icons a.facebook:hover,
+.icons a.facebook:active { background: #1877F2; }
+
+.icons a.instagram:hover,
+.icons a.instagram:active { background: linear-gradient(135deg, #feda75, #d62976, #962fbf, #4f5bd5); }
+
+.icons a.tiktok:hover,
+.icons a.tiktok:active { background: #000000; }
+
+.icons a.snapchat:hover,
+.icons a.snapchat:active { background: #fffc00; }
+
+.icons a.whatsapp:hover,
+.icons a.whatsapp:active { background: #25d366; }
 
 /* Images inside icons */
 .icons img {
