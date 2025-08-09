@@ -24,13 +24,13 @@ function typewriter(element, text, speed, callback) {
 // Run typewriters
 typewriter(document.getElementById("type1"), typewriter1Text, speed1, () => {
   typewriter(document.getElementById("type2"), typewriter2Text, speed2, () => {
-    // Make second text clickable
+    // Make second text clickable (no underline)
     const t2 = document.getElementById("type2");
     const link = document.createElement("a");
     link.href = typewriter2Link;
     link.target = "_blank";
     link.style.color = "inherit";
-    link.style.textDecoration = "underline";
+    link.style.textDecoration = "none"; // removed underline
     link.textContent = t2.textContent;
     t2.textContent = "";
     t2.appendChild(link);
