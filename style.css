@@ -7,7 +7,10 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden; /* stops scrolling */
+  overflow: hidden;            /* no scroll */
+  -webkit-user-select: none;   /* Safari */
+  -ms-user-select: none;       /* IE10+ */
+  user-select: none;           /* modern browsers */
 }
   body {
     margin: 0;
@@ -109,5 +112,6 @@ img  {
     opacity: 1;
 
 }
+
 
 
