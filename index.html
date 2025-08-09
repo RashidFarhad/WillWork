@@ -93,7 +93,7 @@
   background: none;
   color: #f1c40f;
   padding: 0;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Rabar 021', sans-serif;
   animation: glowPulse 1.5s infinite alternate;
   z-index: 999;
@@ -102,14 +102,16 @@
 @keyframes glowPulse {
   0% {
     text-shadow:
-      2px 2px 4px #000, /* black shadow */
+      2px 2px 4px #000,   /* solid black shadow */
+      -2px -2px 4px #000, /* black on the opposite side */
       0 0 5px #f1c40f,
       0 0 10px #f1c40f,
       0 0 20px #f1c40f;
   }
   100% {
     text-shadow:
-      2px 2px 4px #000, /* black shadow */
+      2px 2px 4px #000,
+      -2px -2px 4px #000,
       0 0 10px #f1c40f,
       0 0 20px #f1c40f,
       0 0 30px #f1c40f;
