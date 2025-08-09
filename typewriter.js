@@ -1,14 +1,11 @@
-// First typewriter text
+// Texts for typewriters
 const typewriter1Text = "Rashid Farhad";
-
-// Second typewriter text (Kurdish text only)
 const typewriter2Text = "…سەردانمان بکەن لە تێلێگرام";
 const typewriter2Link = "https://t.me/rashidfarhad";
 
-// Settings
-const speed1 = 80;   // ms per char for first
-const speed2 = 80;   // ms per char for second
-const pause = 1500;  // pause before deleting (if looped)
+// Typing speeds
+const speed1 = 80;
+const speed2 = 80;
 
 // Typewriter function
 function typewriter(element, text, speed, callback) {
@@ -24,11 +21,10 @@ function typewriter(element, text, speed, callback) {
   type();
 }
 
-// Run first typewriter
+// Run typewriters
 typewriter(document.getElementById("type1"), typewriter1Text, speed1, () => {
-  // Run second typewriter after first finishes
   typewriter(document.getElementById("type2"), typewriter2Text, speed2, () => {
-    // Once second is done, wrap it in a link
+    // Make second text clickable
     const t2 = document.getElementById("type2");
     const link = document.createElement("a");
     link.href = typewriter2Link;
