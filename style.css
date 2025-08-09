@@ -44,7 +44,24 @@ h1 {
 }
 bold;
 }
+/* Fixed small logo at top center */
+.logo-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px;
+  border-radius: 12px;
+  z-index: 1000;
+}
 
+.logo-container img {
+  width: 60px !important;  /* force small size */
+  height: 60px !important;
+  object-fit: contain;
+  display: block;
+}
 
 /* Social Icons Row */
 .icons {
