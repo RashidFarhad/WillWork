@@ -170,22 +170,24 @@ h1 span.cyan { color: #00e5ff; }
     transition: all 0.3s ease;
   }
 
-  .icons a {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    transition: all 0.25s ease;
+ .icons a {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: none;
+  transition: background 0.25s ease;
   }
 
   /* Hover colors */
-  .icons a.facebook:hover { background: #1877F2; box-shadow: 0 0 15px #1877F2; }
-  .icons a.instagram:hover { background: #E1306C; box-shadow: 0 0 15px #E1306C; }
-  .icons a.tiktok:hover { background: #e4dddd; box-shadow: 0 0 15px #ffffff; }
-  .icons a.snapchat:hover { background: #FFD700; box-shadow: 0 0 15px #ffffff; }
-  .icons a.whatsapp:hover { background: #25d366; box-shadow: 0 0 15px #25D366; }
+ /* Active (click/tap) brand colors */
+.icons a.facebook:active { background: #1877F2; }
+.icons a.instagram:active { background: linear-gradient(135deg, #feda75, #d62976, #962fbf, #4f5bd5); }
+.icons a.tiktok:active { background: #000000; }
+.icons a.snapchat:active { background: #fffc00; }
+.icons a.whatsapp:active { background: #25d366; }
 
   .icons a:hover {
     border-radius: 50%;
