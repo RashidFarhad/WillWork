@@ -90,7 +90,7 @@ img  {
 /* General style for both typewriters */
 .typewriter {
     font-family: 'Rabar 021' , sans-serif;
-    font-size: 28px;
+    font-size: 14px;
     color: black;
     text-shadow: 0 0 5px white, 0 0 10px white;
     opacity: 0;                /* Start hidden for smooth appearance */
@@ -102,4 +102,5 @@ img  {
 /* When typing starts, fade in */
 .typewriter.active {
     opacity: 1;
+
 }
