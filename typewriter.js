@@ -1,20 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const text = "...سەردانمان بکەن لە تێلێگرام"; // Your text
-  const el = document.getElementById("typewriter");
-  let i = 0;
-
-  function typeWriter() {
-    if (i < text.length) {
-      el.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 100);
+function typeWriter(text, elementId, delay = 100) {
+    let i = 0;
+    function typing() {
+        if (i < text.length) {
+            document.getElementById(elementId).innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, delay);
+        }
     }
-  }
+    typing();
+}
 
-  typeWriter();
-
-  el.addEventListener("click", function() {
-    el.classList.add("clicked");
-    window.open("https://t.me/rashidfarhad", "_blank"); // Change link here
-  });
-});
+// Start both together
+window.onload = function() {
+    typeWriter("Rashid Farhad", "typewriter1", 100);
+    typeWriter("سەردانمان بکەن لە تێلێگرام", "typewriter2", 100);
+};
