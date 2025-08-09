@@ -1,15 +1,23 @@
 // typewriter.js
-
-// Text you want to type
-const text = "دەست پێکردنی ناوێنەکان..."; 
-let i = 0;
-
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("typewriter").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, 100); // typing speed
+document.addEventListener('DOMContentLoaded', function () {
+  const text = "دەست پێکردنی ناوێنەکان..."; // change this to whatever you want
+  const el = document.getElementById('typewriter');
+  if (!el) {
+    console.error('typewriter element not found (add <span id="typewriter"></span> in the HTML).');
+    return;
   }
-}
 
-window.onload = typeWriter;
+  el.textContent = ''; // clear any initial text
+  let i = 0;
+  const speed = 80; // ms per character (smaller = faster)
+
+  function type() {
+    if (i <= text.length) {
+      el.textContent = text.slice(0, i);
+      i++;
+      setTimeout(type, speed);
+    }
+  }
+
+  type();
+});
