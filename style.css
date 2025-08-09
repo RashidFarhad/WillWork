@@ -69,7 +69,16 @@ h1 span.cyan { color: #00e5ff; }
   border-radius: 50%;
   padding: 8px;
 }
-
+/* type writer */
+#typewriter {
+  color: #f1c40f; /* yellow text */
+  text-shadow:
+    2px 2px 4px #000,   /* black shadow */
+    -2px -2px 4px #000, /* black on opposite side */
+    0 0 5px #f1c40f,
+    0 0 10px #f1c40f,
+    0 0 20px #f1c40f; /* yellow glow */
+}
 /* Icon Colors */
 .facebook { background-color: #1877f2; }
 .instagram { background: linear-gradient(135deg, #1a2980, #26d0ce); }
