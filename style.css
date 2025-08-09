@@ -132,9 +132,9 @@ footer {
   text-shadow:
     2px 2px 4px #000,
     -2px -2px 4px #000,
-    0 0 5px #f1c40f,
-    0 0 10px #f1c40f,
-    0 0 20px #f1c40f;
+    0 0 5px #808080,
+    0 0 10px #808080,
+    0 0 20px #808080;
   animation: glowPulse 1.5s infinite alternate;
 }
 
