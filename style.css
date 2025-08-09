@@ -1,24 +1,16 @@
 @font-face {
   font-family: 'Rabar 021';
   src: url('fonts/Rabar_021.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
-/* Prevent scrolling and text selection */
+/* Base styles */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   overflow: hidden;
-  -webkit-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   font-family: 'Rabar 021', sans-serif;
-}
-
-/* Background */
-body {
   background-image: linear-gradient(to right, #1A2980, #26D0CE);
   background-size: 400% 400%;
   animation: gradientMove 10s ease infinite;
@@ -26,25 +18,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
+/* Gradient animation */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Heading */
-h1 {
-  font-size: 2rem;
-  text-align: center;
-  line-height: 1.6;
-  font-weight: bold;
-}
-bold;
-}
-/* Fixed small logo at top center */
+/* Logo fixed at top */
 .logo-container {
   position: fixed;
   top: 20px;
@@ -55,22 +38,21 @@ bold;
   border-radius: 12px;
   z-index: 1000;
 }
-
 .logo-container img {
-  max-width: 60px;   /* limit width */
-  max-height: 60px;  /* limit height */
-  width: auto;       /* keep proportions */
-  height: auto;      /* keep proportions */
+  max-width: 60px;
+  max-height: 60px;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  display: block;
-}
-/* Social Icons Row */
-.icons {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
 }
 
+/* Social icons */
+.icons {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 .icon {
   width: 60px;
   height: 60px;
@@ -78,44 +60,27 @@ bold;
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-  background: transparent; /* no background by default */
+  background: transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
-
-/* Hover/Tap Effect */
-.icon:hover,
-.icon:active {
+.icon img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+.icon:hover {
   transform: scale(1.15);
   border-radius: 50%;
 }
 
-/* Individual hover colors + glow */
-.facebook:hover { background: #1877f2; box-shadow: 0 0 15px #1877f2; }
+/* Hover effects */
+.facebook:hover { background: #1877F2; box-shadow: 0 0 15px #1877F2; }
 .instagram:hover { background: #E1306C; box-shadow: 0 0 15px #E1306C; }
 .tiktok:hover { background: #e4dddd; box-shadow: 0 0 15px #ffffff; }
 .snapchat:hover { background: #FFD700; box-shadow: 0 0 15px #ffffff; }
 .whatsapp:hover { background: #25d366; box-shadow: 0 0 15px #25d366; }
 
-/* Icon images */
-.icons img {
-  width: 35px;
-  height: 35px;
-  object-fit: contain;
-}
-/* Glowing yellow text */
-.glow-text {
-  margin-top: 30px;
-  color: #FFD700;
-  text-shadow: 2px 2px 4px #000,
-               -2px -2px 4px #000,
-               0 0 5px #FFD700,
-               0 0 10px #FFD700,
-               0 0 20px #FFD700;
-  animation: glowPulse 1.5s infinite alternate;
-}
-
-/* Footer glowing Kurdor */
+/* Footer text glow */
 footer {
   position: fixed;
   bottom: 5px;
@@ -125,51 +90,7 @@ footer {
   font-size: 12px;
   animation: glowPulse 1.5s infinite alternate;
 }
-
 @keyframes glowPulse {
-  0% {
-    text-shadow:
-      2px 2px 4px #000,
-      -2px -2px 4px #000,
-      0 0 5px #f1c40f,
-      0 0 10px #f1c40f,
-      0 0 20px #f1c40f;
-  }
-  100% {
-    text-shadow:
-      2px 2px 4px #000,
-      -2px -2px 4px #000,
-      0 0 10px #f1c40f,
-      0 0 20px #f1c40f,
-      0 0 30px #f1c40f;
-  }
-}
-/* Typewriter - pure black with black shadow */
-.clickable-typewriter {
-  color: #000000; /* pure black text */
-  font-size: 14px;
-  cursor: pointer;
-  text-shadow:
-    2px 2px 4px #000000,
-    -2px -2px 4px #000000;
-  animation: glowPulseBlack 1.5s infinite alternate;
-}
-
-.clickable-typewriter.clicked {
-  text-shadow: none;
-  color: black;
-  animation: none;
-}
-
-@keyframes glowPulseBlack {
-  0% {
-    text-shadow:
-      2px 2px 4px #000000,
-      -2px -2px 4px #000000;
-  }
-  100% {
-    text-shadow:
-      2px 2px 6px #000000,
-      -2px -2px 6px #000000;
-  }
+  0% { text-shadow: 2px 2px 4px #000, -2px -2px 4px #000, 0 0 5px #f1c40f; }
+  100% { text-shadow: 2px 2px 6px #000, -2px -2px 6px #000, 0 0 10px #f1c40f; }
 }
