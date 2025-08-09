@@ -54,7 +54,11 @@ h1 span.cyan { color: #00e5ff; }
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
-
+.icons a.facebook { background: #1877F2; }
+.icons a.instagram { background: linear-gradient(135deg, #feda75, #d62976, #962fbf, #4f5bd5); }
+.icons a.tiktok { background: #000000; }
+.icons a.snapchat { background: #fffc00; }
+.icons a.whatsapp { background: #25d366; }
 .icon:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
