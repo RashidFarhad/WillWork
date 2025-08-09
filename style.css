@@ -18,12 +18,21 @@ html, body {
 
 body {
   background-image: linear-gradient(to right, #1A2980, #26D0CE);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Rabar 021', sans-serif;
   color: white;
+  text-align: center;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Heading */
@@ -36,13 +45,14 @@ h1 {
 h1 span.yellow { color: #ffeb3b; }
 h1 span.cyan { color: #00e5ff; }
 
-/* Social Icons */
+/* Social Icons Container */
 .social-icons {
   margin-top: 30px;
   display: flex;
   gap: 20px;
 }
 
+/* Icon Box */
 .icon {
   width: 60px;
   height: 60px;
@@ -55,12 +65,11 @@ h1 span.cyan { color: #00e5ff; }
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
+/* Hover & Active Effects */
 .icon:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
-
-/* Click Effect */
 .icon:active {
   background-color: #777;
 }
@@ -70,7 +79,7 @@ h1 span.cyan { color: #00e5ff; }
   padding: 8px;
 }
 
-/* Icon Colors */
+/* Icon Background Colors */
 .facebook { background-color: #1877f2; }
 .instagram { background: linear-gradient(135deg, #1a2980, #26d0ce); }
 .tiktok { background-color: #e6dddd; }
@@ -82,4 +91,24 @@ h1 span.cyan { color: #00e5ff; }
   width: 30px;
   height: 30px;
   object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+}
+
+/* Extra hover glow for specific networks */
+.facebook:hover { box-shadow: 0 0 15px #1877F2; }
+.instagram:hover { box-shadow: 0 0 15px #E1306C; }
+.tiktok:hover { box-shadow: 0 0 15px #ffffff; }
+.telegram:hover { box-shadow: 0 0 15px #0088cc; }
+.whatsapp:hover { box-shadow: 0 0 15px #25D366; }
+
+/* Typewriter text style */
+#type1, #type2 {
+  color: black;
+  text-shadow: 2px 2px 4px white;
+  font-size: 14px;
+}
+
+#type2 a {
+  text-decoration: none;
+  color: inherit;
 }
