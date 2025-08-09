@@ -43,6 +43,7 @@ h1 {
   font-weight: bold;
 }
 
+
 /* Social Icons Row */
 .icons {
   margin-top: 30px;
@@ -58,25 +59,30 @@ h1 {
   justify-content: center;
   border-radius: 15px;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.icon:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  background: transparent; /* no background by default */
 }
 
-.facebook { background-color: #1877f2; }
-.instagram { background: linear-gradient(135deg, #1a2980, #26d0ce); }
-.tiktok { background-color: #e6dddd; }
-.snapchat { background-color: #fffc00; }
-.whatsapp { background-color: #25d366; }
+/* Hover/Tap Effect */
+.icon:hover,
+.icon:active {
+  transform: scale(1.15);
+  border-radius: 50%;
+}
 
+/* Individual hover colors + glow */
+.facebook:hover { background: #1877f2; box-shadow: 0 0 15px #1877f2; }
+.instagram:hover { background: #E1306C; box-shadow: 0 0 15px #E1306C; }
+.tiktok:hover { background: #e4dddd; box-shadow: 0 0 15px #ffffff; }
+.snapchat:hover { background: #FFD700; box-shadow: 0 0 15px #ffffff; }
+.whatsapp:hover { background: #25d366; box-shadow: 0 0 15px #25d366; }
+
+/* Icon images */
 .icons img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   object-fit: contain;
 }
-
 /* Glowing yellow text */
 .glow-text {
   margin-top: 30px;
