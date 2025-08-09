@@ -4,16 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <title>Social Media Links</title>
-<script src="typewriter.js"></script>
+
 <style>
-  /* Disable text selection */
   body {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none;     /* IE/Edge */
-    user-select: none;         /* Standard */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* 🚫 Disable scrolling */
+    overflow: hidden;
   }
 
   @font-face {
@@ -44,14 +43,10 @@
     100% { background-position: 0% 50%; }
   }
 
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-
   .icons {
     display: flex;
     gap: 20px;
+    margin-top: 20px;
   }
 
   .icons img {
@@ -87,31 +82,33 @@
 </head>
 
 <body>
-<span id="type1"></span>
 
+  <!-- First typewriter -->
+  <span id="type1"></span>
+
+  <!-- Social icons -->
   <div class="icons">
     <a href="https://facebook.com" target="_blank" class="facebook">
-      <img src="facebook.png">
+      <img src="facebook.png" alt="Facebook">
     </a>
-
     <a href="https://instagram.com" target="_blank" class="instagram">
-      <img src="insta.png">
+      <img src="insta.png" alt="Instagram">
     </a>
-
     <a href="https://tiktok.com" target="_blank" class="tiktok">
-      <img src="tiktok.png">
+      <img src="tiktok.png" alt="TikTok">
     </a>
-
     <a href="https://snapchat.com" target="_blank" class="snapchat">
-      <img src="snap.png">
+      <img src="snap.png" alt="Snapchat">
     </a>
-
     <a href="https://wa.me/123456789" target="_blank" class="whatsapp">
-      <img src="w.png">
+      <img src="w.png" alt="WhatsApp">
     </a>
-<br/>
-    <span id="type2"></span>
-    
   </div>
+
+  <!-- Second typewriter -->
+  <span id="type2" style="margin-top: 20px;"></span>
+
+  <!-- Link external JavaScript -->
+  <script src="typewriter.js"></script>
 </body>
 </html>
