@@ -124,22 +124,41 @@ footer {
       0 0 30px #f1c40f;
   }
 }
-/* Typewriter glow */
+/* Typewriter glow - grey version */
 .clickable-typewriter {
-  color: #808080;
-  font-size: 14px;
+  color: #b0b0b0; /* light grey */
+  font-size: 20px;
   cursor: pointer;
   text-shadow:
     2px 2px 4px #000,
     -2px -2px 4px #000,
-    0 0 5px #808080,
-    0 0 10px #808080,
-    0 0 20px #808080;
-  animation: glowPulse 1.5s infinite alternate;
+    0 0 5px #b0b0b0,
+    0 0 10px #b0b0b0,
+    0 0 20px #b0b0b0;
+  animation: glowPulseGrey 1.5s infinite alternate;
 }
 
 .clickable-typewriter.clicked {
-  text-shadow: black;
+  text-shadow: none;
   color: white;
   animation: none;
+}
+
+@keyframes glowPulseGrey {
+  0% {
+    text-shadow:
+      2px 2px 4px #000,
+      -2px -2px 4px #000,
+      0 0 5px #b0b0b0,
+      0 0 10px #b0b0b0,
+      0 0 20px #b0b0b0;
+  }
+  100% {
+    text-shadow:
+      2px 2px 6px #000,
+      -2px -2px 6px #000,
+      0 0 10px #b0b0b0,
+      0 0 20px #b0b0b0,
+      0 0 30px #b0b0b0;
+  }
 }
