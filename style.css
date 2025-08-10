@@ -110,5 +110,7 @@ img  {
 /* When typing starts, fade in */
 .typewriter.active {
     opacity: 1;
-
+}
+#typewriter1 {
+  border-bottom: 2px solid grey;
 }
