@@ -1,43 +1,36 @@
-function typeWriter(elementId, text, speed, isLink = false, linkHref = "") {
-    let index = 0;
-    const element = document.getElementById(elementId);
-    element.classList.add("typewriter");
+var $copyContainer = $(".copy-container"),
+    $replayIcon = $('#cb-replay'),
+    $copyWidth = $('.copy-container').find('p').width();
 
-    // Create element for text
-    let target;
-    if (isLink) {
-        target = document.createElement("a");
-        target.href = linkHref;
-        target.target = "_blank";
-        target.style.textDecoration = "none";
-        target.style.color = "inherit";
-    } else {
-        target = document.createElement("span");
-    }
-    element.appendChild(target);
+var mySplitText = new SplitText($copyContainer, {type:"words"}),
+    splitTextTimeline = new TimelineMax();
+var handleTL = new TimelineMax();
 
-    // Smooth fade-in when typing starts
-    requestAnimationFrame(() => {
-        element.classList.add("active");
-    });
+// WIP - need to clean up, work on initial state and handle issue with multiple lines on mobile
 
-    function type() {
-        if (index < text.length) {
-            target.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, speed);
-        }
-    }
-    type();
+var tl = new TimelineMax();
+
+tl.add(function(){
+  animateCopy();
+  blinkHandle();
+}, 0.2)
+
+function animateCopy() {
+  mySplitText.split({type:"chars, words"}) 
+  splitTextTimeline.staggerFrom(mySplitText.chars, 0.001, {autoAlpha:0, ease:Back.easeInOut.config(1.7), onComplete: function(){
+    animateHandle()
+  }}, 0.05);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    typeWriter("typewriter1", "Rashid Farhad", 100);
-    typeWriter("typewriter2", "… پەیوەندیکردن لە رێگەی تێلێگرام -" , 100, true, "https://t.me/rashidfarhad");
-     typeWriter("typewriter3", "… پەیوەندیکردن لە رێگەی ئێمەیل -", 100, true, "mailto:rashidfarhad122@gmail.com");
+function blinkHandle() {
+  handleTL.fromTo('.handle', 0.4, {autoAlpha:0},{autoAlpha:1, repeat:-1, yoyo:true}, 0);
+}
 
-});
+function animateHandle() {
+  handleTL.to('.handle', 0.7, {x:$copyWidth, ease:SteppedEase.config(12)}, 0.05);
+}
 
-
-
-
+$('#cb-replay').on('click', function(){
+  splitTextTimeline.restart()
+  handleTL.restart()
+})
