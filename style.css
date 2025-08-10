@@ -112,21 +112,3 @@ img  {
     opacity: 1;
 
 }
-#typewriter1 {
-  font-family: 'Rabar 021' , sans-serif;
-    font-size: 14px;
-    color: black;
-    text-shadow: 0 0 5px white, 0 0 10px white;
-    opacity: 0;                /* Start hidden for smooth appearance */
-    transition: opacity 0.5s ease-in;
-    display: inline-block;
-    white-space: pre-wrap;     /* Keep spaces and line breaks */
-  border-bottom: 2px solid grey; /* the line */
-  padding-bottom: 5px;           /* space between text and line */
-  margin-bottom: 15px;           /* space between line and icons */
-  display: inline-block;         /* line only as wide as text */
-}
-
-
-
-
