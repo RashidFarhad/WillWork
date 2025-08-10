@@ -33,10 +33,11 @@ function typeWriter(elementId, text, speed, isLink = false, linkHref = "") {
 
 document.addEventListener("DOMContentLoaded", () => {
     typeWriter("typewriter1", "Rashid Farhad", 100);
-    typeWriter("typewriter2", "… پەیوەندیکردن لە رێگەی تێلێگرام..." , 100, true, "https://t.me/rashidfarhad");
-     typeWriter("typewriter3", "… پەیوەندیکردن لە رێگەی ئێمەیل...", 100, true, "mailto:rashidfarhad122@gmail.com");
+    typeWriter("typewriter2", "… پەیوەندیکردن لە رێگەی تێلێگرام -" , 100, true, "https://t.me/rashidfarhad");
+     typeWriter("typewriter3", "… پەیوەندیکردن لە رێگەی ئێمەیل -", 100, true, "mailto:rashidfarhad122@gmail.com");
 
 });
+
 
 
 
