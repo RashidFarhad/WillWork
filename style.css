@@ -112,6 +112,12 @@ img  {
     opacity: 1;
 
 }
+.name-line {
+  border-bottom: 2px solid grey; /* line thickness + color */
+  padding-bottom: 5px;           /* space between text and line */
+  margin-bottom: 15px;           /* space below the line (above icons) */
+  display: inline-block;         /* so line matches text width */
+}
 
 
 
